@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Squares from "./Squares.js"
+import {UseEffect, UseState} from "react";
 
 function App() {
+  const GameName = "Simon";
+  const Style = {"color" : "rgb(255, 0, 0)"}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style = {Style}> {GameName} </h1>
+      <Squares></Squares>
     </div>
   );
 }
