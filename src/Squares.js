@@ -12,6 +12,9 @@ export default function Squares(props) {
     const[SquaresColor, setSquaresColors] = useState([...RegColor])
     const TimeForEachLightToStayOn = 1000 //Milliseconds
     const TimeBetweenEachLightToTurnOn = 200 //Milliseconds
+    //TEXT
+    const GameName = "Simon";
+    const TextStyle = {"color" : "rgb(255, 0, 0)"}
     function FlashSingle(Index, MultipleIndexs, HighlightedFor) {
         let ArrayToReturn = [...RegColor]
         if (MultipleIndexs) {
@@ -60,7 +63,7 @@ export default function Squares(props) {
         setSequenceOrder(CurrentStage)
         Flash(CurrentStage, false, TimeForEachLightToStayOn, TimeBetweenEachLightToTurnOn)
     }, [Stage])
-    const SquaresHeight = "54.55vw"
+    const SquaresHeight = "50vh"
     function handleClick(ButtonIndex) { //Button Index = 1, 2, 3, 4
         if (CanClick) {
             CanClick = false
@@ -93,6 +96,7 @@ export default function Squares(props) {
             <div onClick = {() => handleClick(2)} style = {{"backgroundColor":SquaresColor[1], "height":SquaresHeight}}>  </div>
             <div onClick = {() => handleClick(3)} style = {{"backgroundColor":SquaresColor[2], "height":SquaresHeight}}>  </div>
             <div onClick = {() => handleClick(4)} style = {{"backgroundColor":SquaresColor[3], "height":SquaresHeight}}>  </div>
+            <h1 style = {TextStyle}> {GameName} </h1>
         </div>
     )
 }

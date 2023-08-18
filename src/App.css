@@ -1,6 +1,13 @@
 h1{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 9vw;
+  font-size: 20vw;
+  position: absolute;
+  margin: auto;
+  bottom: 42vh;
+  -webkit-text-stroke-width: 0.25vw;
+  -webkit-text-stroke-color: black;
+  left: 26.5vw;
+  pointer-events: none;
 }
 
 .App {
