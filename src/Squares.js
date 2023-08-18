@@ -72,7 +72,11 @@ export default function Squares(props) {
                     Flash([ButtonIndex, ButtonIndex, ButtonIndex, ButtonIndex], false, 200, 50)
                     setTimeout(() => setStage(Stage + 1), 250*4)
                     console.log("Correct!!")
-                    setStage(Stage + 1)
+                    if (Stage == LengthArray.length) {
+                        setStage(0)
+                    }else {
+                        setStage(Stage + 1)
+                    }
                 }
                 else {
                     Flash([ButtonIndex, ButtonIndex], false, 200, 50)
